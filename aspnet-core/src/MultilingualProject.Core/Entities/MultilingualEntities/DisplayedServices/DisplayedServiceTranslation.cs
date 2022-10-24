@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Abp.Domain.Entities;
 
-namespace MultilingualProject.WebApp.DisplayedServices
+namespace MultilingualProject.Entities.MultilingualEntities.DisplayedServices
 {
     public class DisplayedServiceTranslation : Entity, IEntityTranslation<DisplayedService, Guid>
     {

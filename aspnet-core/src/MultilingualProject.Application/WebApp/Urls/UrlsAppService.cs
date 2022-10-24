@@ -18,11 +18,13 @@ using Abp.Linq.Extensions;
 using MultilingualProject.Authorization;
 using MultilingualProject.Entities.MultilingualEntities;
 using MultilingualProject.Entities.MultilingualEntities.Blog;
+using MultilingualProject.Entities.MultilingualEntities.DisplayedServices;
 using MultilingualProject.Entities.MultilingualEntities.TextContents;
+using MultilingualProject.Extensions;
 using MultilingualProject.WebApp.DisplayedServices;
 using MultilingualProject.WebApp.Urls.Dto;
 
-namespace EndesErp.WebApp.Urls
+namespace MultilingualProject.WebApp.Urls
 {
     [UnitOfWork]
     public class UrlsAppService : ApplicationService, IUrlsAppService
@@ -36,9 +38,9 @@ namespace EndesErp.WebApp.Urls
         private readonly IRepository<DisplayedService, Guid> _displayedServiceRepository;
 
         private readonly ICacheManager _cacheManager;
-        public static readonly string SERVICE_DISCRIMINATOR = typeof(Entities.WebEntities.Services.DisplayedService).Name;
-        public static readonly string BLOG_DISCRIMINATOR = typeof(Entities.WebEntities.Blogs.Blog).Name;
-        public static readonly string TEXTCONTENT_DISCRIMINATOR = typeof(Entities.WebEntities.TextContents.TextContent).Name;
+        public static readonly string SERVICE_DISCRIMINATOR = "DisplayedService";
+        public static readonly string BLOG_DISCRIMINATOR = "Blog";
+        public static readonly string TEXTCONTENT_DISCRIMINATOR = "TextContent";
 
         public UrlsAppService(ILanguageManager languageManager,
             IRepository<Url> urlRepository,

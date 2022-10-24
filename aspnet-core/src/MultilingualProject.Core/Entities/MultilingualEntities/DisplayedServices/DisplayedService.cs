@@ -3,9 +3,8 @@ using Abp.Domain.Entities.Auditing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using MultilingualProject.WebApp.DisplayedServices;
 
-namespace MultilingualProject.WebApp.DisplayedServices
+namespace MultilingualProject.Entities.MultilingualEntities.DisplayedServices
 {
     public class DisplayedService : FullAuditedEntity<Guid>, IMultiLingualEntity<DisplayedServiceTranslation>
     {

@@ -14,6 +14,7 @@ using MultilingualProject.Authorization;
 using MultilingualProject.Entities.MultilingualEntities;
 using MultilingualProject.Entities.MultilingualEntities.TextContents;
 using MultilingualProject.WebApp.TextContents.Dto;
+using MultilingualProject.WebApp.Urls;
 using MultilingualProject.WebApp.Urls.Dto;
 
 namespace MultilingualProject.WebApp.TextContents
@@ -81,11 +82,11 @@ namespace MultilingualProject.WebApp.TextContents
             return MapToEntityDto(textContent);
         }
 
-        //public override async Task DeleteAsync(EntityDto<Guid> input)
-        //{
-        //    await _urlRepository.DeleteAsync(d => d.ItemPkId == input.Id && d.Discriminator == TEXTCONTENT_DISCRIMINATOR);
-        //    await Repository.DeleteAsync(d => d.Id == input.Id);
-        //}
+        public override async Task DeleteAsync(EntityDto<Guid> input)
+        {
+            await _urlRepository.DeleteAsync(d => d.ItemPkId == input.Id && d.Discriminator == TEXTCONTENT_DISCRIMINATOR);
+            await Repository.DeleteAsync(d => d.Id == input.Id);
+        }
 
         public override async Task<TextContentDto> GetAsync(EntityDto<Guid> input)
         {

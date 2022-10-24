@@ -12,6 +12,9 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\MultilingualProject.Core\MultilingualProject.Core.csproj" />
   </ItemGroup>
 </Project>
