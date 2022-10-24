@@ -14,7 +14,4 @@
   <ItemGroup>
     <ProjectReference Include="..\MultilingualProject.Core\MultilingualProject.Core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="WebApp\TextContents\Dtos\" />
-  </ItemGroup>
 </Project>
